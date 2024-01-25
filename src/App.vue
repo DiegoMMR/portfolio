@@ -1,47 +1,82 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Navbar from './components/Navbar.vue'
+import Name from './components/Name.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <header class="header inset-x-0 top-0 z-50">
+    <Navbar />
+    <Name />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <div class="cube" v-for="i in 6" :key="i"></div>
   </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <main>algo</main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style scoped lang="scss">
+.header {
+  background-color: #96a5c4;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.cube {
+  position: absolute;
+  top: 40vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  border: solid 1px darken(#96a5c4, 8%);
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+
+  &:nth-child(2n) {
+    border-color: lighten(#96a5c4, 10%);
+  }
+
+  &:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 30vh;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+
+  &:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 45vh;
+  }
+
+  &:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
   }
 }
 </style>
