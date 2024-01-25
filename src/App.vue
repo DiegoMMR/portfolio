@@ -1,15 +1,9 @@
 <script setup lang="ts">
-import Navbar from './components/Navbar.vue'
-import Name from './components/Name.vue'
-import ColorRain from './components/ColorRain.vue'
+import Header from './components/sections/Header/index.vue'
 </script>
 
 <template>
-  <header class="header inset-x-0 top-0 z-50">
-    <ColorRain />
-    <Navbar />
-    <Name />
-  </header>
+  <Header />
 
   <main>algoadsa dsa dadasdas</main>
 </template>
@@ -17,6 +11,5 @@ import ColorRain from './components/ColorRain.vue'
 <style scoped lang="scss">
 .header {
   position: relative;
-  overflow: hidden;
 }
 </style>

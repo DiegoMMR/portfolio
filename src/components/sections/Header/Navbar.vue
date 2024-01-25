@@ -1,15 +1,6 @@
 <template>
   <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
-        <img
-          class="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt=""
-        />
-      </a>
-    </div>
+    <div class="flex lg:flex-1"></div>
     <div class="flex lg:hidden">
       <button
         type="button"
@@ -20,12 +11,12 @@
         <Bars3Icon class="h-6 w-6" aria-hidden="true" />
       </button>
     </div>
-    <div class="hidden lg:flex lg:gap-x-12">
+    <div class="hidden lg:flex lg:gap-x-12 justify-center">
       <a
         v-for="item in navigation"
         :key="item.name"
         :href="item.href"
-        class="text-sm font-semibold leading-6 text-gray-900"
+        class="text-sm font-semibold leading-6 text-slate-50"
         >{{ item.name }}</a
       >
     </div>
@@ -40,14 +31,7 @@
       class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
     >
       <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-        </a>
+        <!-- Remove logo-related code here -->
         <button
           type="button"
           class="-m-2.5 rounded-md p-2.5 text-gray-700"

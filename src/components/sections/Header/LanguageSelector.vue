@@ -2,14 +2,14 @@
   <Listbox as="div" v-model="selected">
     <div class="relative mt-2">
       <ListboxButton
-        class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+        class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-dark-blue sm:text-sm sm:leading-6"
       >
         <span class="flex items-center">
           <component :is="selected.icon" class="h-5 w-5 flex-shrink-0" />
           <span class="ml-3 block truncate">{{ selected.name }}</span>
         </span>
         <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-          <ChevronUpDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+          <ChevronDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
         </span>
       </ListboxButton>
 
@@ -30,7 +30,7 @@
           >
             <li
               :class="[
-                active ? 'bg-indigo-600 text-white' : 'text-gray-900',
+                active ? 'bg-blue text-white' : 'text-gray-900',
                 'relative cursor-default select-none py-2 pl-3 pr-9'
               ]"
             >
@@ -45,7 +45,7 @@
               <span
                 v-if="selected"
                 :class="[
-                  active ? 'text-white' : 'text-indigo-600',
+                  active ? 'text-white' : 'text-blue',
                   'absolute inset-y-0 right-0 flex items-center pr-4'
                 ]"
               >
@@ -59,12 +59,12 @@
   </Listbox>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script setup lang="ts">
+import { shallowRef } from 'vue'
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/vue'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
-import UsaFlag from './icons/UsaFlag.vue'
-import SpainFlag from './icons/SpainFlag.vue'
+import { CheckIcon, ChevronDownIcon } from '@heroicons/vue/20/solid'
+import UsaFlag from '../../icons/UsaFlag.vue'
+import SpainFlag from '../../icons/SpainFlag.vue'
 
 const languages = [
   {
@@ -81,5 +81,5 @@ const languages = [
   }
 ]
 
-const selected = ref(languages[1])
+const selected = shallowRef(languages[1])
 </script>
