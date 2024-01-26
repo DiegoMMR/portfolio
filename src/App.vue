@@ -1,11 +1,25 @@
 <script setup lang="ts">
-import Header from './components/sections/Header/index.vue'
+import ParticlesBackground from './components/ParticlesBackground.vue'
+import Header from './components/Header/index.vue'
+import About from './components/Content/About/index.vue'
+import Experience from './components/Content/Experience/index.vue'
 </script>
 
 <template>
-  <Header />
+  <ParticlesBackground />
 
-  <main>algoadsa dsa dadasdas</main>
+  <div
+    class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
+  >
+    <div class="lg:flex lg:justify-between lg:gap-4">
+      <Header />
+
+      <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
+        <About />
+        <Experience />
+      </main>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">

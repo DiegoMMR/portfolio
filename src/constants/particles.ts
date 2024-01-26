@@ -1,10 +1,10 @@
 import { type ISourceOptions } from '@tsparticles/engine'
 
 export const options: ISourceOptions = {
-  fullScreen: { enable: false, zIndex: -1 },
+  fullScreen: { enable: true, zIndex: -1 },
   background: {
     color: {
-      value: '#283845'
+      value: '#191923'
     }
   },
   fpsLimit: 60,
@@ -24,10 +24,10 @@ export const options: ISourceOptions = {
   },
   particles: {
     color: {
-      value: '#DBE4EE'
+      value: '#5BC0EB'
     },
     links: {
-      color: '#DBE4EE',
+      color: '#5BC0EB',
       distance: 150,
       enable: true,
       opacity: 0.8,
@@ -38,7 +38,7 @@ export const options: ISourceOptions = {
       enable: true,
       outModes: 'bounce',
       random: false,
-      speed: 4,
+      speed: 1,
       straight: false
     },
     number: {

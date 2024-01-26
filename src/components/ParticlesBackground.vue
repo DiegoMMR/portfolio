@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { options } from '../../../constants/particles'
+import { options } from '../constants/particles'
 </script>
 
 <style scoped>
