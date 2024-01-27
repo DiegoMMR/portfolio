@@ -11,7 +11,7 @@ const differenceInYears = Math.floor(differenceInMilliseconds / (365.25 * 24 * 6
 
 <template>
   <Section id="about" :title="t('header.nav.about')">
-    <p class="mb-4">
+    <p class="mb-4 text-justify">
       {{ t('about.paragraph1', { years: differenceInYears }) }}
     </p>
   </Section>

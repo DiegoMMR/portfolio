@@ -1,3 +1,5 @@
+export const LOCALE_KEY = 'locale'
+
 export const navigation = [
   { name: 'header.nav.about', href: '#about' },
   { name: 'header.nav.experience', href: '#experience' },

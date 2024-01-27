@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import ParticlesBackground from './components/ParticlesBackground.vue'
+import LanguageSelector from './components/Header/LanguageSelector.vue'
+
 import Header from './components/Header/index.vue'
+
 import About from './components/Content/About/index.vue'
 import Experience from './components/Content/Experience/index.vue'
-import LanguageSelector from './components/Header/LanguageSelector.vue'
+import Projects from './components/Content/Projects/index.vue'
 </script>
 
 <template>
@@ -19,6 +22,7 @@ import LanguageSelector from './components/Header/LanguageSelector.vue'
       <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
         <About />
         <Experience />
+        <Projects />
       </main>
     </div>
   </div>

@@ -1,9 +1,9 @@
 export const experience = {
   techStack: 'Tech Stack',
-  jobs: {
-    wird: {
-      companyName: 'Wird',
-      jobTitle: 'Software Engineer',
+  jobs: [
+    {
+      company: 'Wird',
+      title: 'Software Engineer',
       startDate: 'September 2022',
       endDate: 'Present',
       achievements: [
@@ -29,9 +29,9 @@ export const experience = {
         'Kubernetes'
       ]
     },
-    one80: {
-      companyName: 'International Excess Companies',
-      jobTitle: 'Full-Stack Developer',
+    {
+      company: 'International Excess Companies',
+      title: 'Full-Stack Developer',
       startDate: 'February 2018',
       endDate: 'September 2022',
       achievements: [
@@ -55,5 +55,5 @@ export const experience = {
         'Webpack'
       ]
     }
-  }
+  ]
 }

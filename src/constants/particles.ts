@@ -4,7 +4,7 @@ export const options: ISourceOptions = {
   fullScreen: { enable: true, zIndex: -1 },
   background: {
     color: {
-      value: '#191923'
+      value: '#121212'
     }
   },
   fpsLimit: 60,
@@ -24,10 +24,10 @@ export const options: ISourceOptions = {
   },
   particles: {
     color: {
-      value: '#5BC0EB'
+      value: '#3F5765'
     },
     links: {
-      color: '#5BC0EB',
+      color: '#3F5765',
       distance: 150,
       enable: true,
       opacity: 0.8,

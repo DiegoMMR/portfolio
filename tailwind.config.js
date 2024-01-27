@@ -4,9 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        blue: '#81A4CD',
-        'dark-blue': '#81A4CD',
-        'light-blue': '#81A4CD'
+        turquoise: '#81A4CD',
+        'dark-turquoise': '#3F5765',
+        'soft-black': '#121212',
+        'light-gray': '#D3D3D3',
+        'charcoal-gray': '#404040',
+        'teal-blue': '#008080',
+        green: '#00FF00'
       }
     }
   },
