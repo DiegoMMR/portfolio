@@ -1,8 +1,9 @@
+import { header } from './header'
+import { about } from './about'
+import { experience } from './experience'
+
 export const es = {
-  nav: {
-    about: 'Acerca de',
-    projects: 'Proyectos',
-    experience: 'Experiencia',
-    contact: 'Contacto'
-  }
+  header,
+  about,
+  experience
 }

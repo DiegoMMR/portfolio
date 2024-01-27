@@ -1,40 +1,18 @@
 <script setup lang="ts">
 import Section from '../Section.vue'
+import { startDate } from '@/constants'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
+
+const today = new Date()
+const differenceInMilliseconds = today.valueOf() - startDate.valueOf()
+const differenceInYears = Math.floor(differenceInMilliseconds / (365.25 * 24 * 60 * 60 * 1000))
 </script>
 
 <template>
-  <Section id="about" :title="t('nav.about')">
+  <Section id="about" :title="t('header.nav.about')">
     <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam commodi totam culpa explicabo
-      quae repellendus consectetur non, architecto similique quas odit exercitationem error
-      provident ad magnam laborum. Magni, repellat voluptate.
-    </p>
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam commodi totam culpa explicabo
-      quae repellendus consectetur non, architecto similique quas odit exercitationem error
-      provident ad magnam laborum. Magni, repellat voluptate.
-    </p>
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam commodi totam culpa explicabo
-      quae repellendus consectetur non, architecto similique quas odit exercitationem error
-      provident ad magnam laborum. Magni, repellat voluptate.
-    </p>
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam commodi totam culpa explicabo
-      quae repellendus consectetur non, architecto similique quas odit exercitationem error
-      provident ad magnam laborum. Magni, repellat voluptate.
-    </p>
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam commodi totam culpa explicabo
-      quae repellendus consectetur non, architecto similique quas odit exercitationem error
-      provident ad magnam laborum. Magni, repellat voluptate.
-    </p>
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam commodi totam culpa explicabo
-      quae repellendus consectetur non, architecto similique quas odit exercitationem error
-      provident ad magnam laborum. Magni, repellat voluptate.
+      {{ t('about.paragraph1', { years: differenceInYears }) }}
     </p>
   </Section>
 </template>

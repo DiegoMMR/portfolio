@@ -26,13 +26,7 @@
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-
-const navigation = [
-  { name: 'nav.about', href: '#about' },
-  { name: 'nav.projects', href: '#projects' },
-  { name: 'nav.experience', href: '#experience' },
-  { name: 'nav.contact', href: '#contact' }
-]
+import { navigation } from '@/constants'
 
 const activeLink = ref('#about')
 

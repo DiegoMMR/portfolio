@@ -37,6 +37,7 @@
 </template>
 
 <script setup lang="ts">
+import { type ILanguage } from '@/types'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
@@ -47,12 +48,12 @@ import SpainFlag from '../icons/SpainFlag.vue'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
-const languages = [
+const languages: ILanguage[] = [
   { name: 'English', value: 'en', icon: UsaFlag },
   { name: 'Español', value: 'es', icon: SpainFlag }
 ]
 
-const changeLanguage = (lang) => {
+const changeLanguage = (lang: ILanguage) => {
   selected.value = lang
   locale.value = lang.value
 }
