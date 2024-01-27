@@ -14,7 +14,7 @@
           <span
             class="nav-text text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-200 group-focus-visible:text-slate-200"
           >
-            {{ item.name }}
+            {{ t(item.name) }}
           </span>
         </a>
       </li>
@@ -24,12 +24,14 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const navigation = [
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contanct', href: '#contact' }
+  { name: 'nav.about', href: '#about' },
+  { name: 'nav.projects', href: '#projects' },
+  { name: 'nav.experience', href: '#experience' },
+  { name: 'nav.contact', href: '#contact' }
 ]
 
 const activeLink = ref('#about')

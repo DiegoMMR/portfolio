@@ -1,85 +1,61 @@
 <template>
-  <Listbox as="div" v-model="selected">
-    <div class="relative mt-2">
-      <ListboxButton
-        class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-dark-blue sm:text-sm sm:leading-6"
+  <Menu as="div" class="relative inline-block text-right float-right mt-5 mr-5">
+    <div>
+      <MenuButton
+        class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
       >
-        <span class="flex items-center">
-          <component :is="selected.icon" class="h-5 w-5 flex-shrink-0" />
-          <span class="ml-3 block truncate">{{ selected.name }}</span>
-        </span>
-        <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-          <ChevronDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
-        </span>
-      </ListboxButton>
-
-      <transition
-        leave-active-class="transition ease-in duration-100"
-        leave-from-class="opacity-100"
-        leave-to-class="opacity-0"
-      >
-        <ListboxOptions
-          class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-        >
-          <ListboxOption
-            as="template"
-            v-for="language in languages"
-            :key="language.id"
-            :value="language"
-            v-slot="{ active, selected }"
-          >
-            <li
-              :class="[
-                active ? 'bg-blue text-white' : 'text-gray-900',
-                'relative cursor-default select-none py-2 pl-3 pr-9'
-              ]"
-            >
-              <div class="flex items-center">
-                <component :is="language.icon" class="h-5 w-5 flex-shrink-0" />
-                <span
-                  :class="[selected ? 'font-semibold' : 'font-normal', 'ml-3 block truncate']"
-                  >{{ language.name }}</span
-                >
-              </div>
-
-              <span
-                v-if="selected"
-                :class="[
-                  active ? 'text-white' : 'text-blue',
-                  'absolute inset-y-0 right-0 flex items-center pr-4'
-                ]"
-              >
-                <CheckIcon class="h-5 w-5" aria-hidden="true" />
-              </span>
-            </li>
-          </ListboxOption>
-        </ListboxOptions>
-      </transition>
+        <component v-if="selected" :is="selected.icon" class="h-6 w-6" />
+        <ChevronDownIcon class="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+      </MenuButton>
     </div>
-  </Listbox>
+
+    <transition
+      enter-active-class="transition ease-out duration-100"
+      enter-from-class="transform opacity-0 scale-95"
+      enter-to-class="transform opacity-100 scale-100"
+      leave-active-class="transition ease-in duration-75"
+      leave-from-class="transform opacity-100 scale-100"
+      leave-to-class="transform opacity-0 scale-95"
+    >
+      <MenuItems
+        class="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+      >
+        <div class="py-1">
+          <MenuItem v-slot="{ active }" v-for="lang in languages">
+            <div
+              @click="changeLanguage(lang)"
+              class="block flex items-center px-4 py-1 hover:bg-gray-100 cursor-pointer"
+            >
+              <component :is="lang.icon" class="h-8 w-8" />
+              <span class="ml-2 text-black">{{ lang.name }}</span>
+            </div>
+          </MenuItem>
+        </div>
+      </MenuItems>
+    </transition>
+  </Menu>
 </template>
 
 <script setup lang="ts">
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+
 import { shallowRef } from 'vue'
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/vue'
-import { CheckIcon, ChevronDownIcon } from '@heroicons/vue/20/solid'
-import UsaFlag from '../../icons/UsaFlag.vue'
-import SpainFlag from '../../icons/SpainFlag.vue'
+import UsaFlag from '../icons/UsaFlag.vue'
+import SpainFlag from '../icons/SpainFlag.vue'
+
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
 
 const languages = [
-  {
-    id: 1,
-    name: 'English',
-    value: 'en',
-    icon: UsaFlag
-  },
-  {
-    id: 2,
-    name: 'Español',
-    value: 'es',
-    icon: SpainFlag
-  }
+  { name: 'English', value: 'en', icon: UsaFlag },
+  { name: 'Español', value: 'es', icon: SpainFlag }
 ]
 
-const selected = shallowRef(languages[1])
+const changeLanguage = (lang) => {
+  selected.value = lang
+  locale.value = lang.value
+}
+
+const selected = shallowRef(languages.find((lang) => lang.value === locale.value))
 </script>

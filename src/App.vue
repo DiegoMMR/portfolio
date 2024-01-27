@@ -3,10 +3,12 @@ import ParticlesBackground from './components/ParticlesBackground.vue'
 import Header from './components/Header/index.vue'
 import About from './components/Content/About/index.vue'
 import Experience from './components/Content/Experience/index.vue'
+import LanguageSelector from './components/Header/LanguageSelector.vue'
 </script>
 
 <template>
   <ParticlesBackground />
+  <LanguageSelector />
 
   <div
     class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
