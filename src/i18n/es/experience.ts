@@ -11,22 +11,6 @@ export const experience = {
         'Codifiqué actualizaciones y modificaciones de software en función de especificaciones de diseño detalladas.',
         'Mantuve una extensión de Chrome para Gmail y Outlook, implementando TypeScript y Webpack.',
         'Diseñé una extensión de Chrome para Gmail optimizada para el rendimiento, utilizando tecnologías de vanguardia para una mejor interfaz de usuario.'
-      ],
-      stack: [
-        'React.js',
-        'Next.js',
-        'Kotlin',
-        'JavaScript',
-        'TypeScript',
-        'CSS',
-        'MySQL',
-        'Redis',
-        'Git',
-        'Docker',
-        'Webpack',
-        'Kubernetes',
-        'Google App Script',
-        'Kubernetes'
       ]
     },
     one80: {
@@ -40,19 +24,6 @@ export const experience = {
         'Logré una reducción del 60% en el tiempo de compilación de Vue.js front-end a través de la optimización de webpack.',
         'Renové plantillas de WordPress para mejorar la usabilidad del sitio.',
         'Diseñé e innové plantillas de correo electrónico para una visualización óptima en varios clientes.'
-      ],
-      stack: [
-        'Vue.js',
-        'Laravel',
-        'WordPress',
-        'JavaScript',
-        'TypeScript',
-        'PHP',
-        'Bootstrap',
-        'Redis',
-        'Git',
-        'Docker',
-        'Webpack'
       ]
     }
   }

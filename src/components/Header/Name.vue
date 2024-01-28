@@ -8,5 +8,4 @@ const { t } = useI18n()
   <h2 class="mt-3 text-lg font-medium tracking-tight text-light-gray sm:text-xl">
     {{ t('header.title') }}
   </h2>
-  <p class="mt-4 max-w-xs leading-normal text-light-gray">{{ t('header.description') }}</p>
 </template>

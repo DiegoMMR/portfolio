@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Navbar from './Navbar.vue'
 import Name from './Name.vue'
+import SocialMedia from './SocialMedia.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Name from './Name.vue'
   >
     <div>
       <Name />
+      <SocialMedia />
       <Navbar />
     </div>
   </header>

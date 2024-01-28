@@ -5,7 +5,6 @@ export const header = {
   nav: {
     about: 'Acerca de',
     experience: 'Experiencia',
-    projects: 'Proyectos',
-    contact: 'Contacto'
+    projects: 'Proyectos'
   }
 }

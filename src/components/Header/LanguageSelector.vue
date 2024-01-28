@@ -43,8 +43,8 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
 import { shallowRef } from 'vue'
-import UsaFlag from '../icons/UsaFlag.vue'
-import SpainFlag from '../icons/SpainFlag.vue'
+import UsaFlag from '@/assets/icons/UsaFlag.vue'
+import SpainFlag from '@/assets/icons/SpainFlag.vue'
 
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()

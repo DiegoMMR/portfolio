@@ -18,6 +18,7 @@ export const experience = {
         'Kotlin',
         'JavaScript',
         'TypeScript',
+        'Redux',
         'CSS',
         'MySQL',
         'Redis',
@@ -25,8 +26,8 @@ export const experience = {
         'Docker',
         'Webpack',
         'Kubernetes',
-        'Google App Script',
-        'Kubernetes'
+        'Kubernetes',
+        'i18n'
       ]
     },
     {
@@ -44,6 +45,7 @@ export const experience = {
       stack: [
         'Vue.js',
         'Laravel',
+        'Vuex',
         'WordPress',
         'JavaScript',
         'TypeScript',
