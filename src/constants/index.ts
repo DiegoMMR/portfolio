@@ -13,5 +13,3 @@ export const socialMedia = [
   { name: 'Github', link: 'https://github.com/DiegoMMR', icon: GitHub },
   { name: 'LinkedIn', link: 'https://www.linkedin.com/in/diego-m-rivera', icon: LinkedIn }
 ]
-
-export const startDate = new Date(2018, 1)

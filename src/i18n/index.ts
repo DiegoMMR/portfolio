@@ -16,7 +16,7 @@ if (!localStorageLanguage) {
   }
 }
 
-const selectedLanguage = localStorageLanguage || 'es'
+const selectedLanguage = localStorageLanguage || 'en'
 
 export default createI18n({
   locale: selectedLanguage,
