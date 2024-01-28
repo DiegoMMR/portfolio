@@ -2,6 +2,7 @@
   <Menu as="div" class="relative inline-block text-right float-right mt-5 mr-5">
     <div>
       <MenuButton
+        aria-label="Language selector"
         class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-gray-300 hover:bg-charcoal-gray"
       >
         <component v-if="selected" :is="selected.icon" class="h-6 w-6" />
