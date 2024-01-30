@@ -38,28 +38,27 @@
 </template>
 
 <script setup lang="ts">
-import { type ILanguage } from '@/types'
-import { LOCALE_KEY } from '@/constants'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { type ILanguage } from "@/types";
+import { LOCALE_KEY } from "@/constants";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
+import { ChevronDownIcon } from "@heroicons/vue/20/solid";
 
-import { shallowRef } from 'vue'
-import UsaFlag from '@/assets/icons/UsaFlag.vue'
-import SpainFlag from '@/assets/icons/SpainFlag.vue'
+import { shallowRef } from "vue";
+import UsaFlag from "@/assets/icons/UsaFlag.vue";
+import SpainFlag from "@/assets/icons/SpainFlag.vue";
 
-import { useI18n } from 'vue-i18n'
-const { locale } = useI18n()
+const { locale } = useI18n();
 
 const languages: ILanguage[] = [
-  { name: 'English', value: 'en', icon: UsaFlag },
-  { name: 'Español', value: 'es', icon: SpainFlag }
-]
+  { name: "English", value: "en", icon: UsaFlag },
+  { name: "Español", value: "es", icon: SpainFlag },
+];
 
 const changeLanguage = (lang: ILanguage) => {
-  localStorage.setItem(LOCALE_KEY, lang.value)
-  selected.value = lang
-  locale.value = lang.value
-}
+  localStorage.setItem(LOCALE_KEY, lang.value);
+  selected.value = lang;
+  locale.value = lang.value;
+};
 
-const selected = shallowRef(languages.find((lang) => lang.value === locale.value))
+const selected = shallowRef(languages.find((lang) => lang.value === locale.value));
 </script>

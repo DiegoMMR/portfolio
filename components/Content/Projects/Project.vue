@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 
 defineProps({
   stack: { type: Array<string>, required: true },
   image: { type: String, required: false },
-  index: { type: Number, required: true }
-})
+  index: { type: Number, required: true },
+});
 </script>
 
 <template>

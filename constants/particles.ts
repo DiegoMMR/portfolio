@@ -1,61 +1,59 @@
-import { type ISourceOptions } from '@tsparticles/engine'
-
-export const options: ISourceOptions = {
+export const options = {
   fullScreen: { enable: true, zIndex: -1 },
   background: {
     color: {
-      value: '#121212'
-    }
+      value: "#121212",
+    },
   },
   fpsLimit: 60,
   interactivity: {
     events: {
       onHover: {
         enable: true,
-        mode: 'repulse'
-      }
+        mode: "repulse",
+      },
     },
     modes: {
       repulse: {
         distance: 150,
-        duration: 0.4
-      }
-    }
+        duration: 0.4,
+      },
+    },
   },
   particles: {
     color: {
-      value: '#3F5765'
+      value: "#3F5765",
     },
     links: {
-      color: '#3F5765',
+      color: "#3F5765",
       distance: 150,
       enable: true,
       opacity: 0.8,
-      width: 1
+      width: 1,
     },
     move: {
-      direction: 'none',
+      direction: "none",
       enable: true,
-      outModes: 'bounce',
+      outModes: "bounce",
       random: false,
       speed: 1,
-      straight: false
+      straight: false,
     },
     number: {
       density: {
-        enable: true
+        enable: true,
       },
-      value: 140
+      value: 140,
     },
     opacity: {
-      value: 0.5
+      value: 0.5,
     },
     shape: {
-      type: 'circle'
+      type: "circle",
     },
     size: {
-      value: { min: 1, max: 5 }
-    }
+      value: { min: 1, max: 5 },
+    },
   },
-  detectRetina: true
-}
+  detectRetina: true,
+};

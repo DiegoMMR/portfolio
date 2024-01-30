@@ -14,10 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 defineProps({
   id: { type: String, required: true },
-  title: { type: String, required: true }
-})
+  title: { type: String, required: true },
+});
 </script>
