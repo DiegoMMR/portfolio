@@ -18,7 +18,7 @@ useHead({
 </script>
 
 <template>
-  <NuxtParticles id="tsparticles" :options="options"></NuxtParticles>
+  <NuxtParticles id="tsparticles" :options="options" />
   <LanguageSelector />
 
   <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
