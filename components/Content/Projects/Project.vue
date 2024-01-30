@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from "@headlessui/vue";
-import { XMarkIcon, ArrowRightStartOnRectangleIcon } from "@heroicons/vue/20/solid";
+import { XMarkIcon, ArrowRightStartOnRectangleIcon, ArrowsPointingOutIcon } from "@heroicons/vue/20/solid";
 import GitHub from "@/assets/icons/GitHub.vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
@@ -23,10 +23,11 @@ defineProps({
 
 <template>
   <div
-    class="bg-charcoal-gray/40 hover:bg-charcoal-gray/60 p-5 rounded-lg mb-10"
+    class="bg-charcoal-gray/40 hover:bg-charcoal-gray/60 p-5 rounded-lg mb-10 cursor-pointer"
     aria-label="click to view more"
     @click="openModal"
   >
+    <ArrowsPointingOutIcon class="h-5 w-5 float-right text-light-gray hover:text-white" />
     <div class="flex flex-col md:flex-row items-start">
       <img
         :src="image"
@@ -35,7 +36,7 @@ defineProps({
       />
       <div class="md:w-2/3">
         <h2 class="text-xl font-bold mb-2">{{ t(`projects.${index}.title`) }}</h2>
-        <p>
+        <p class="text-light-gray">
           {{ t(`projects.${index}.description`) }}
         </p>
 
