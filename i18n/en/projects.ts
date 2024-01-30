@@ -20,8 +20,8 @@ export const projects = [
   {
     title: "Portfolio",
     description:
-      "This website is built with Vue.js 3 and styled with Tailwind CSS, combining the power of a reactive framework with a utility-first CSS framework.",
-    stack: ["Vue.js", "Typescript", "SCSS", "Tailwind", "Vite", "i18n"],
+      "This website is built with Nuxt 3 and styled with Tailwind CSS, combining the power of a reactive framework with a utility-first CSS framework.",
+    stack: ["Nuxt", "Vue.js", "Typescript", "SCSS", "Tailwind", "Vite", "i18n"],
     image: PortfolioImg,
   },
 ];

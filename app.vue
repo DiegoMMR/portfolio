@@ -7,6 +7,7 @@ import Projects from "@/components/Content/Projects/index.vue";
 import { options } from "@/constants/particles";
 
 useHead({
+  title: "Diego M. Rivera",
   htmlAttrs: {
     class: "scroll-smooth focus:scroll-auto",
   },
