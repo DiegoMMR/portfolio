@@ -39,7 +39,6 @@
 
 <script setup lang="ts">
 import { type ILanguage } from "@/types";
-import { LOCALE_KEY } from "@/constants";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { ChevronDownIcon } from "@heroicons/vue/20/solid";
 
@@ -55,7 +54,6 @@ const languages: ILanguage[] = [
 ];
 
 const changeLanguage = (lang: ILanguage) => {
-  localStorage.setItem(LOCALE_KEY, lang.value);
   selected.value = lang;
   locale.value = lang.value;
 };

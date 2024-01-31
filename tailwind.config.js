@@ -10,7 +10,6 @@ export default {
         "light-gray": "#D3D3D3",
         "charcoal-gray": "#404040",
         "teal-blue": "#008080",
-        green: "#00FF00",
       },
     },
   },
