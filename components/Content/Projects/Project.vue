@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from "@headlessui/vue";
-import { XMarkIcon, ArrowRightStartOnRectangleIcon, ArrowsPointingOutIcon } from "@heroicons/vue/20/solid";
+import { XMarkIcon, ArrowUpRightIcon, LinkIcon } from "@heroicons/vue/20/solid";
 import GitHub from "@/assets/icons/GitHub.vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
@@ -27,7 +27,6 @@ defineProps({
     aria-label="click to view more"
     @click="openModal"
   >
-    <ArrowsPointingOutIcon class="h-5 w-5 float-right text-light-gray hover:text-white" />
     <div class="flex flex-col md:flex-row items-start">
       <img
         :src="image"
@@ -35,7 +34,10 @@ defineProps({
         class="w-full md:w-1/3 md:mr-4 object-contain max-h-64 rounded-md mb-4 md:mb-0"
       />
       <div class="md:w-2/3">
-        <h2 class="text-xl font-bold mb-2">{{ t(`projects.${index}.title`) }}</h2>
+        <h2 class="text-xl font-bold mb-2 flex justify-between">
+          {{ t(`projects.${index}.title`) }}
+          <ArrowUpRightIcon class="h-5 w-5 text-light-gray hover:text-white" />
+        </h2>
         <p class="text-light-gray">
           {{ t(`projects.${index}.description`) }}
         </p>
@@ -115,7 +117,7 @@ defineProps({
                       aria-label="Project Demo (opens in a new tab)"
                       title="Demo"
                     >
-                      <ArrowRightStartOnRectangleIcon class="h-6 w-6" aria-hidden="true" />
+                      <LinkIcon class="h-6 w-6" aria-hidden="true" />
                     </a>
                   </div>
 
