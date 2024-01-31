@@ -7,13 +7,19 @@ import Projects from "@/components/Content/Projects/index.vue";
 import { options } from "@/constants/particles";
 
 useHead({
-  title: "Diego M. Rivera",
   htmlAttrs: {
     class: "scroll-smooth focus:scroll-auto",
   },
   bodyAttrs: {
     class: "leading-relaxed text-white bg-soft-black",
   },
+});
+
+useSeoMeta({
+  title: "Diego M. Rivera",
+  description: "Diego M. Rivera's personal Portfolio. A Full Stack Developer.",
+  ogDescription: "Diego M. Rivera's personal Portfolio. A Full Stack Developer.",
+  keywords: "Diego M. Rivera, Full Stack Developer, Software Engineer, Frontend Developer",
 });
 </script>
 
