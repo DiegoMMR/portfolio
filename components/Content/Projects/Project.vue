@@ -121,11 +121,7 @@ defineProps({
                     </a>
                   </div>
 
-                  <p>
-                    {{ t(`projects.${index}.description`) }}
-                  </p>
-
-                  <div class="flex flex-wrap gap-2 mt-3">
+                  <div class="flex flex-wrap gap-2 mt-3 mb-3">
                     <div
                       class="flex items-center rounded-full bg-turquoise/40 px-2 py-1 text-xs font-medium leading-4 text-dark-turquoise"
                       v-for="(tech, tIndex) in stack"
@@ -133,6 +129,10 @@ defineProps({
                       {{ t(`projects.${index}.stack.${tIndex}`) }}
                     </div>
                   </div>
+
+                  <p>
+                    {{ t(`projects.${index}.description`) }}
+                  </p>
                 </div>
               </div>
 
