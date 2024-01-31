@@ -2,7 +2,6 @@
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from "@headlessui/vue";
 import { XMarkIcon, ArrowUpRightIcon, LinkIcon } from "@heroicons/vue/20/solid";
 import GitHub from "@/assets/icons/GitHub.vue";
-import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const isOpen = ref(false);
