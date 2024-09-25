@@ -7,7 +7,7 @@ export const experience = {
       startDate: "Julio 2024",
       endDate: "Present",
       achievements: ["Implementar a pixel perfect diseños de Figma.", "Mantener los proyectos actualizados para evitar vulnerabilidades."],
-      stack: ["Angular", "Jest", "Kotlin", "JavaScript", "TypeScript", "CSS", "Tailwind", "Git", "i18n"],
+      stack: ["Angular", "Jest", "JavaScript", "TypeScript", "CSS", "Tailwind", "Git", "i18n"],
     },
     {
       company: "Wird",
