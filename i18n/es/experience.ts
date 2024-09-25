@@ -2,10 +2,18 @@ export const experience = {
   techStack: "Tecnologías",
   jobs: [
     {
+      company: "Banco Industrial",
+      title: "Desarrollador Frontend",
+      startDate: "Julio 2024",
+      endDate: "Present",
+      achievements: ["Implementar a pixel perfect diseños de Figma.", "Mantener los proyectos actualizados para evitar vulnerabilidades."],
+      stack: ["Angular", "Jest", "Kotlin", "JavaScript", "TypeScript", "CSS", "Tailwind", "Git", "i18n"],
+    },
+    {
       company: "Wird",
       title: "Ingeniero de Software",
       startDate: "Septiembre 2022",
-      endDate: "Presente",
+      endDate: "Julio 2024",
       achievements: [
         "Colaboré con el equipo de producto para comprender los requisitos y las especificaciones comerciales en torno a la gestión de carteras, análisis y riesgos.",
         "Codifiqué actualizaciones y modificaciones de software en función de especificaciones de diseño detalladas.",
