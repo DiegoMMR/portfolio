@@ -10,6 +10,6 @@ export default defineNuxtConfig({
     viewer: true,
   },
   i18n: {
-    vueI18n: "./i18n/config.ts",
+    vueI18n: "./config.ts",
   },
 });
