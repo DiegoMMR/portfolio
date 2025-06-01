@@ -23,36 +23,36 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
-import { navigation } from '@/constants'
+import { ref, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+import { navigation } from "@/constants";
 
-const activeLink = ref('#about')
+const activeLink = ref("#about");
 
 const setActive = (targetId: string) => {
-  activeLink.value = targetId
-}
+  activeLink.value = targetId;
+};
 
 const handleScroll = () => {
-  const scrollThreshold = 100
-  const scrollPosition = window.scrollY
+  const scrollThreshold = 100;
+  const scrollPosition = window.scrollY;
 
   navigation.forEach((item) => {
-    const targetElement = document.querySelector(item.href) as HTMLElement
+    const targetElement = document.querySelector(item.href) as HTMLElement;
 
     if (targetElement) {
-      const targetPosition = targetElement.offsetTop
+      const targetPosition = targetElement.offsetTop;
       if (Math.abs(scrollPosition - targetPosition) < scrollThreshold) {
-        activeLink.value = item.href
+        activeLink.value = item.href;
       }
     }
-  })
-}
+  });
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+  window.addEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped lang="scss">

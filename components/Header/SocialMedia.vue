@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { socialMedia } from '@/constants'
+import { socialMedia } from "@/constants";
 </script>
 
 <template>

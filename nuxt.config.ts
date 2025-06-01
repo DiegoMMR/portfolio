@@ -1,13 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-particles", "@nuxtjs/i18n"],
-  tailwindcss: {
-    cssPath: ["@/assets/css/tailwind.css", { injectPosition: "first" }],
-    configPath: "tailwind.config",
-    exposeConfig: { level: 2 },
-    viewer: true,
+  modules: ["nuxt-particles", "@nuxtjs/i18n"],
+  css: ["~/assets/css/main.css"],
+  vite: {
+    plugins: [tailwindcss()],
   },
   i18n: {
     vueI18n: "./config.ts",
