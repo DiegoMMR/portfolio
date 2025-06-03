@@ -2,7 +2,7 @@ export const options = {
   fullScreen: { enable: true, zIndex: -1 },
   background: {
     color: {
-      value: "#121212",
+      value: '#121212',
     },
   },
   fpsLimit: 60,
@@ -10,7 +10,7 @@ export const options = {
     events: {
       onHover: {
         enable: true,
-        mode: "repulse",
+        mode: 'repulse',
       },
     },
     modes: {
@@ -22,19 +22,19 @@ export const options = {
   },
   particles: {
     color: {
-      value: "#3F5765",
+      value: '#3F5765',
     },
     links: {
-      color: "#3F5765",
+      color: '#3F5765',
       distance: 150,
       enable: true,
       opacity: 0.8,
       width: 1,
     },
     move: {
-      direction: "none",
+      direction: 'none',
       enable: true,
-      outModes: "bounce",
+      outModes: 'bounce',
       random: false,
       speed: 1,
       straight: false,
@@ -49,7 +49,7 @@ export const options = {
       value: 0.5,
     },
     shape: {
-      type: "circle",
+      type: 'circle',
     },
     size: {
       value: { min: 1, max: 5 },
