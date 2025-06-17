@@ -12,7 +12,7 @@ export const experience = {
         'Integrated and configured Storybook to document and visually test UI components',
         'Improved developer experience and consistency by enhancing component documentation and usage guidelines',
       ],
-      stack: ['Angular', 'Jest', 'JavaScript', 'TypeScript', 'CSS', 'Tailwind', 'Git', 'i18n'],
+      stack: ['Angular', 'Jest', 'JavaScript', 'TypeScript', 'CSS', 'Tailwind', 'Git', 'i18n', 'Stoybook'],
     },
     {
       company: 'Wird',

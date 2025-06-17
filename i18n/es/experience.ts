@@ -12,7 +12,7 @@ export const experience = {
         'Integré y configuré Storybook para documentar y probar visualmente los componentes de UI',
         'Mejoré la experiencia del desarrollador y la consistencia al optimizar la documentación y las guías de uso de los componentes',
       ],
-      stack: ['Angular', 'Jest', 'JavaScript', 'TypeScript', 'CSS', 'Tailwind', 'Git', 'i18n'],
+      stack: ['Angular', 'Jest', 'JavaScript', 'TypeScript', 'CSS', 'Tailwind', 'Git', 'i18n', 'Stoybook'],
     },
     {
       company: 'Wird',
